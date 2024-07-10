@@ -1,0 +1,16 @@
+entrypoint = "server.ts"
+run = "cd FrontEnd && npm run start"
+modules = ["angular-node-20"]
+
+[packager]
+language = "dotnet"
+
+[packager.features]
+packageSearch = true
+
+[nix]
+channel = "stable-23_11"
+
+[[ports]]
+localPort = 4200
+externalPort = 80
