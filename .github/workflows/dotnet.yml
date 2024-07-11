@@ -1,0 +1,41 @@
+
+name: .NET ,NPM Build
+
+env:
+  DOTNET_ROOT: '/publish'
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+      - name: .NET ,Setup
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Dependencies ,Restore using local nuget.config
+        run:  dotnet restore -s http://s900b216/SEM.NuGetServer.v3/feed/index.json -s https://api.nuget.org/v3/index.json --packages packages --ignore-failed-sources
+
+      - name: npm ,Setup
+        working-directory: FrontEnd
+        run: npm install
+
+      - name: Frontend ,nx-build
+        working-directory: FrontEnd
+        run: npm run build
+
+      - name: Dotnet ,Build
+        run:  dotnet build --configuration Release --source "BackEnd/BackEnd.csproj" -o ${{env.DOTNET_ROOT}}/my-app
+
+      - name: Dotnet ,Test
+        run: dotnet test --no-build --verbosity normal
+
