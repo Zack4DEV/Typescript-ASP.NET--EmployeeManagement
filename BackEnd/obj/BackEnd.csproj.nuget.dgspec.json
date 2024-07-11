@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/runner/DEMO-Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj": {}
+  },
+  "projects": {
+    "/home/runner/DEMO-Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/DEMO-Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj",
+        "projectName": "BackEnd",
+        "projectPath": "/home/runner/DEMO-Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/DEMO-Typescript-ASPNET-EmployeeManagementSystem/BackEnd/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/nix/store/fyb65p0g5k1ksib3dsdzfh09biqfvwpx-dotnet-sdk-6.0.418/sdk/6.0.418/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

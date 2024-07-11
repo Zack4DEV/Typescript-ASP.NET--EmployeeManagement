@@ -1,16 +1,5 @@
 ## Employee Management System (EMS)
 
-### About:
-An Employee Management System To Manage Employee's Staff
-<br/>
-
-### Used Technologies:
-##### [TYPESCRIPT](https://www.typescriptlang.org/)
-##### [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/web/javascript)
-##### [HTML](https://developer.mozilla.org/en-US/docs/web/html)
-##### [CSS](https://developer.mozilla.org/en-US/docs/web/css)
-##### [ASP.NET CORE](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-8.0?view=aspnetcore-8.0)
-
 ### Launch:
 
 ##### Development server
@@ -40,6 +29,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ##### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
-
-### License:
-MIT: [http://z4dev.mit-license.org](http://z4dev.mit-license.org)
