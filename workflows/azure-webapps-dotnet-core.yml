@@ -1,0 +1,82 @@
+
+name: Azure Web App Option To Build And Deploy
+
+env:
+  AZURE_WEBAPP_NAME: EmployeeManagementSystem    
+  AZURE_WEBAPP_PACKAGE_PATH: '.'                
+  DOTNET_VERSION: '8.0'                        
+
+on:
+  push:
+    branches: [ "dev" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: .NET Core ,Setup
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Dependency caching for faster builds ,Setup 
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Dependencies ,Restore
+        run: dotnet restore
+
+      - name: Npm ,Setup
+        working-directory: FrontEnd
+        run: npm install
+
+      - name: FrontEnd ,nx-build
+        working-directory: FrontEnd
+        run: npm run build
+
+      - name: Dotnet ,Build
+        run: dotnet build --configuration Release
+
+      - name: Dotnet ,Publish
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+      - name: Artifact ,Upload for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: ${{env.DOTNET_ROOT}}/myapp
+
+  deploy:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Development'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Artifact ,Download from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: .net-app
+
+  # Deployment Commented ,Active Subscription InNeed
+  #    - name: Azure Web App ,Deploy
+  #      id: deploy-to-webapp
+  #      uses: azure/webapps-deploy@v2
+  #      with:
+  #        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+  #        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}                      ## AZURE_WEBAPP_PUBLISH_PROFILE ,To Bind
+  #        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

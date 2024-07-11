@@ -1,0 +1,36 @@
+
+name: .NET ,NPM Build
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+      - name: .NET ,Setup
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Dependencies ,Restore
+        run: dotnet restore
+
+      - name: npm ,Setup
+        working-directory: FrontEnd
+        run: npm install
+
+      - name: Frontend ,nx-build
+        working-directory: FrontEnd
+        run: npm run build
+
+      - name: Dotnet ,Build
+        run: dotnet build --no-restore
+      - name: Dotnet ,Test
+        run: dotnet test --no-build --verbosity normal
