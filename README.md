@@ -15,7 +15,11 @@ An Employee Management System To Manage Employee's Staff
 
 ##### Development server
 
+<<<<<<< HEAD
 Run `ng start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+=======
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+>>>>>>> 8da1e05 (Project - . - *)
 
 ##### Code scaffolding
 
@@ -23,11 +27,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ##### Build
 
+<<<<<<< HEAD
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build .
 
 ##### Watch
 
 Run `ng watch` to build the project, when the files change.
+=======
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+>>>>>>> 8da1e05 (Project - . - *)
 
 ##### Running unit tests
 
