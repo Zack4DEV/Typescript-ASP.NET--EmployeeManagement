@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 entrypoint = "server.ts"
+=======
+>>>>>>> f0d4ae5 (Project - . - *)
 run = "cd FrontEnd && npm run start"
 modules = ["angular-node-20"]
 
@@ -24,4 +27,8 @@ exposeLocalhost = true
 [[ports]]
 localPort = 7156
 externalPort = 3000
+<<<<<<< HEAD
 exposeLocalhost = true
+=======
+exposeLocalhost = true
+>>>>>>> f0d4ae5 (Project - . - *)
