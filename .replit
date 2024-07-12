@@ -1,4 +1,3 @@
-run = "cd FrontEnd && npm run start"
 modules = ["angular-node-20"]
 
 [packager]
