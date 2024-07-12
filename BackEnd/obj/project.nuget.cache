@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I622i6TZdj1Jzzq6jW+5hkX9Ehcr4DipqDbdsaWD+Nck9aQvPhfAqP285YkINR1iKclQ7cPQNd1KO7Z22zh4Zw==",
+  "dgSpecHash": "aeElvpGoP+zjgN+ZJ7QU1OpbH4Gg0XB4QEpGpzQmQKObl9FSMGrk6+efQRcAD8yUYFd0CkFLWED0PI4at944NA==",
   "success": true,
   "projectFilePath": "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,10 @@
     "/home/runner/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/home/runner/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/runner/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "/home/runner/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.netcore.app.ref/6.0.26/microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.26/microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.26/microsoft.netcore.app.host.linux-x64.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }
