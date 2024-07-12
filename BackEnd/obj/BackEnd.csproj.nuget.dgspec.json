@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj": {}
+    "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj": {}
   },
   "projects": {
-    "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj": {
+    "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj",
+        "projectUniqueName": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/BackEnd.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/obj/",
+        "projectPath": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/Typescript-ASPNET-EmployeeManagementSystem/BackEnd/nuget.config",
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/nuget.config",
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -33,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -89,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/35ym1y449wvn3snvhd8aq0c61byhwyy4-dotnet-sdk-8.0.101/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

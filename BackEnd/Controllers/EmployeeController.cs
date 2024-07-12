@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Data;
 using Models;
+using Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
