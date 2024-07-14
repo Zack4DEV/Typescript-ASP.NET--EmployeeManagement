@@ -23,6 +23,9 @@ jobs:
       uses: zhuxb711/artifacts-size-based-cleanup-action@v1.1.5
       with:
           token: '${{ github.token }}'
+          limit: "512MB"
+          artifactPaths: "/home/runner/work/Typescript-ASP.NET--EmployeeManagementSystem/Typescript-ASP.NET--EmployeeManagementSystem/dist/Employee_Management_System"
+          
     - name: Artifact, Checkout
       uses: ouzi-dev/go-make-action@v1.5.0
       with: 
