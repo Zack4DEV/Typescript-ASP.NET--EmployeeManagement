@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 env:
-  OUT_DIR: '/dist'
+  OUT_DIR: 'dist'
   
 jobs:
  build:
@@ -20,7 +20,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.7
     - name: Artifact, Checkout
-      uses: asafHalely/action-checkout@v0.0.1
+      uses: ouzi-dev/go-make-action@v1.5.0
+      with: 
+          target: '${{ github.workspace }}/${{ env.OUT_DIR }}/Employee_Management_System'
     - name: Attest
       uses: actions/attest-build-provenance@v1.3.3
       with:
