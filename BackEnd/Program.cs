@@ -1,3 +1,4 @@
+using Employee_Management_System__BackEnd.Data;
 using Microsoft.EntityFrameworkCore; 
 
 var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -15,8 +16,10 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddRazorPages();
-    
-builder.Services.AddDbContext<Data.EmployeeContext>(options =>
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDbContext<EmployeeContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
@@ -36,24 +39,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseCors("AllowAll");
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapGet("/echo",
-            context => context.Response.WriteAsync("echo"))
-            .RequireCors(MyAllowSpecificOrigins);
-
-        endpoints.MapControllers()
-                 .RequireCors(MyAllowSpecificOrigins);
-
-        endpoints.MapGet("/echo2",
-            context => context.Response.WriteAsync("echo2"));
-
-        endpoints.MapRazorPages();
-    });
 
 app.MapControllers();
 

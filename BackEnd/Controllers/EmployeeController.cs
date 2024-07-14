@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Models;
-using Data;
+using Employee_Management_System__BackEnd.Models;
+using Employee_Management_System__BackEnd.Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Employee_Management_System__BackEnd.Models;
 
-namespace Data;
+namespace Employee_Management_System__BackEnd.Data;
 
 public class EmployeeContext : DbContext
 {

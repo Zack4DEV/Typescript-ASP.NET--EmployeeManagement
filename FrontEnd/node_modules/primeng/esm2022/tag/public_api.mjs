@@ -1,3 +1,0 @@
-export * from './tag';
-export * from './tag.interface';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hcHAvY29tcG9uZW50cy90YWcvcHVibGljX2FwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxjQUFjLE9BQU8sQ0FBQztBQUN0QixjQUFjLGlCQUFpQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi90YWcnO1xuZXhwb3J0ICogZnJvbSAnLi90YWcuaW50ZXJmYWNlJztcbiJdfQ==

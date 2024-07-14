@@ -3238,9 +3238,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj",
-      "projectName": "BackEnd",
-      "projectPath": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/BackEnd.csproj",
+      "projectUniqueName": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/Employee_Management_System__BackEnd.csproj",
+      "projectName": "Employee_Management_System__BackEnd",
+      "projectPath": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/Employee_Management_System__BackEnd.csproj",
       "packagesPath": "/home/codespace/.nuget/packages/",
       "outputPath": "/workspaces/Typescript-ASP.NET--EmployeeManagementSystem/BackEnd/obj/",
       "projectStyle": "PackageReference",

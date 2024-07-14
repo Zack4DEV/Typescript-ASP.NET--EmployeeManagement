@@ -1,4 +1,4 @@
-namespace Models;
+namespace Employee_Management_System__BackEnd.Models;
 
 public class Employee
 {
