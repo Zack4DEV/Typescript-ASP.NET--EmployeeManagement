@@ -19,8 +19,10 @@ jobs:
   steps:
     - name: Checkout
       uses: actions/checkout@v4.1.7
-    - name: MakeFile.
-      run: "cd /home/runner/work/Typescript-ASP.NET--EmployeeManagementSystem/Typescript-ASP.NET--EmployeeManagementSystem/dist/Employee_Management_System && ./configure && make"
+    - name: Artifact Clean .make*
+      uses: zhuxb711/artifacts-size-based-cleanup-action@v1.1.5
+      with:
+          token: '${{ github.token }}'
     - name: Artifact, Checkout
       uses: ouzi-dev/go-make-action@v1.5.0
       with: 
