@@ -18,7 +18,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Artifact, Checkout
-      run: cd /home/runner/work/_temp/ && make ${{ env.OUT_DIR }}/Employee_Management_System
+      uses: asafHalely/action-checkout@v0.0.1
     - name: Attest
       uses: actions/attest-build-provenance@v1
       with:
