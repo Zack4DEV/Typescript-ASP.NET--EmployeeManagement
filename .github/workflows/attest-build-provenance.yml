@@ -11,26 +11,29 @@ permissions:
   id-token: write
 
 env:
-  OUT_DIR: 'dist'
+  OUT_DIR: '/publish'
   
 jobs:
  build:
   runs-on: ubuntu-latest
   steps:
     - name: Checkout
-      uses: actions/checkout@v4.1.7
+      uses: actions/checkout@v4
+
     - name: Artifact Clean .make*
       uses: zhuxb711/artifacts-size-based-cleanup-action@v1.1.5
       with:
           token: '${{ github.token }}'
           limit: "512MB"
-          artifactPaths: "/home/runner/work/Typescript-ASP.NET--EmployeeManagementSystem/Typescript-ASP.NET--EmployeeManagementSystem/dist/Employee_Management_System"
+          artifactPaths: '${{ env.OUT_DIR }}/my-app'
           
     - name: Artifact, Checkout
-      uses: ouzi-dev/go-make-action@v1.5.0
+      uses: actions/download-artifact@v4
       with: 
-          target: '${{ github.workspace }}/${{ env.OUT_DIR }}/Employee_Management_System'
-    - name: Attest
-      uses: actions/attest-build-provenance@v1.3.3
+          name: "Employee_Management_System"
+
+    - name: Attest Build Provenance
+      uses: actions/attest-build-provenance@v1
       with:
-          subject-path: '${{ github.workspace }}/${{ env.OUT_DIR }}/Employee_Management_System'
+          subject-path: '${{ env.OUT_DIR }}/my-app'
+          name: "Employee_Management_System"
